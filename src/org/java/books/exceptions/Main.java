@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
-		Book[] arrayBooks = new Book[1];
+		Book[] arrayBooks = new Book[3];
 		int i =0;
 		String titolo="";
 		String autore="";
