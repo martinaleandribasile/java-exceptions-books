@@ -14,15 +14,15 @@ public class Main {
 		String editore="";
 		int nPagine = 0;
 		while(i<arrayBooks.length) {
-			System.out.println("Inserisci il titolo del libro: ");
-			titolo= s.nextLine();
-			System.out.println("Inserisci il autore del libro: ");
-			autore= s.nextLine();
-			System.out.println("Inserisci il editore del libro: ");
-			editore= s.nextLine();
-			System.out.println("Inserisci il numero di pagine del libro: ");
-			nPagine = Integer.parseInt(s.nextLine());
 			try {
+				System.out.println("Inserisci il titolo del libro: ");
+				titolo= s.nextLine();
+				System.out.println("Inserisci il autore del libro: ");
+				autore= s.nextLine();
+				System.out.println("Inserisci il editore del libro: ");
+				editore= s.nextLine();
+				System.out.println("Inserisci il numero di pagine del libro: ");
+				nPagine = Integer.parseInt(s.nextLine());
 				Book book = new Book(titolo, autore, editore, nPagine);
 				arrayBooks[i]= book;
 				i++;
@@ -31,17 +31,13 @@ public class Main {
 				System.out.println(e.getMessage());	
 			}catch(IsANumber e) {
 				System.out.println(e.getMessage());
+			}catch(NumberFormatException e) {
+				System.out.println("Attenzione il valore inserito per il numero di pagine non e' valido");
 			}
 		}
 		for(int j =0; j< arrayBooks.length; j++) {
 			System.out.println(j + ") "+ arrayBooks[j].toString());
-		}
-	
-		
-		
-	
-	
-		
+		}	
 	}
 }
 

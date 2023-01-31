@@ -48,7 +48,7 @@ public class Book {
 	}
 	
 	public void validateStgring(String stringa, String text) throws EmptyStrings {
-		if(stringa.length() ==0)
+		if(stringa.isBlank())
 			throw new EmptyStrings(text);
 	}
 	public void validatePageNumber(int pagine) throws IsANumber{
